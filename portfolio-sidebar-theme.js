@@ -20,11 +20,12 @@ export class PortfolioSidebarTheme extends DDDSuper(I18NMixin(LitElement)) {
 
   constructor() {
     super();
-    this.title = "";
+   
+    
     this.t = this.t || {};
     this.t = {
       ...this.t,
-      title: "Title",
+      title: "",
     };
     this.registerLocalization({
       context: this,
@@ -40,6 +41,7 @@ export class PortfolioSidebarTheme extends DDDSuper(I18NMixin(LitElement)) {
     return {
       ...super.properties,
       title: { type: String },
+      
     };
   }
 
@@ -48,10 +50,12 @@ export class PortfolioSidebarTheme extends DDDSuper(I18NMixin(LitElement)) {
     return [super.styles,
     css`
       :host {
-        display: block;
-        color: var(--ddd-theme-primary);
-        background-color: var(--ddd-theme-accent);
+        display: flex;
+        color: var(--ddd-theme-default-nittanyNavy);
+        background-color: var(--ddd-theme-default-nittanyNavy);
         font-family: var(--ddd-font-navigation);
+        height: 900px;
+       
       }
       .wrapper {
         margin: var(--ddd-spacing-2);
@@ -60,6 +64,19 @@ export class PortfolioSidebarTheme extends DDDSuper(I18NMixin(LitElement)) {
       h3 span {
         font-size: var(--portfolio-sidebar-theme-label-font-size, var(--ddd-font-size-s));
       }
+      .sidebar{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        background-color: var(--ddd-theme-default-nittanyNavy);
+        color: white;
+      }
+      .sidebar a {
+      padding: 15px;
+      text-decoration: none;
+      color: white;
+    }
     `];
   }
 
@@ -67,10 +84,26 @@ export class PortfolioSidebarTheme extends DDDSuper(I18NMixin(LitElement)) {
   render() {
     return html`
 <div class="wrapper">
-  <h3><span>${this.t.title}:</span> ${this.title}</h3>
-  <slot></slot>
+<div class="sidebar">
+  <a @click=${() => this._showScreen('home')}>Home</a>
+  <a @click=${() => this._showScreen('about')}>About</a>
+  <a @click=${() => this._showScreen('services')}>Services</a>
+  <a @click=${() => this._showScreen('contact')}>Contact</a>
+  </div>
 </div>`;
   }
+  _showScreen(screenId) {
+    const screens = document.querySelectorAll('.screen');
+    screens.forEach(screen => screen.classList.remove('active'));
+  
+    const targetScreen = document.getElementById(screenId);
+    if (targetScreen) {
+      targetScreen.classList.add('active');
+    }
+  }
+  
+
+ 
 
   /**
    * haxProperties integration via file reference
