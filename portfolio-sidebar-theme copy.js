@@ -1,4 +1,3 @@
-
 /**
  * Copyright 2025 MSchwin
  * @license Apache-2.0, see LICENSE for full text.
@@ -7,7 +6,6 @@ import { LitElement, html, css } from "lit";
 import { DDDSuper } from "@haxtheweb/d-d-d/d-d-d.js";
 import { I18NMixin } from "@haxtheweb/i18n-manager/lib/I18NMixin.js";
 import '@haxtheweb/scroll-button/scroll-button.js';
-
 /**
  * `portfolio-sidebar-theme`
  * 
@@ -52,40 +50,32 @@ export class PortfolioSidebarTheme extends DDDSuper(I18NMixin(LitElement)) {
     return [super.styles,
     css`
       :host {
-        
+        display: flex;
+        color: var(--ddd-theme-default-nittanyNavy);
+        background-color: var(--ddd-theme-default-nittanyNavy);
+        font-family: var(--ddd-font-navigation);
+        height: 900px;
+       
       }
       .wrapper {
-        
-        
-       
-        
-
+        margin: var(--ddd-spacing-2);
+        padding: var(--ddd-spacing-4);
       }
       h3 span {
         font-size: var(--portfolio-sidebar-theme-label-font-size, var(--ddd-font-size-s));
       }
-      .sidebar{  
-        
-        position: fixed ;
-        
-        
-        
-      }
-      .sidebar a {
+      .sidebar{
         display: flex;
         flex-direction: column;
+        height: 100%;
+        width: 100%;
+        background-color: var(--ddd-theme-default-nittanyNavy);
         color: white;
+      }
+      .sidebar a {
       padding: 15px;
       text-decoration: none;
       color: white;
-      
-    
-    
-    }
-    .sidebar scroll-button{
-
-      
-
     }
     
     `];
@@ -96,11 +86,10 @@ export class PortfolioSidebarTheme extends DDDSuper(I18NMixin(LitElement)) {
     return html`
 <div class="wrapper">
 <div class="sidebar">
-  <a href="#1" @click=${() => this._showScreen('home') } >Home </a>
+  <a href="#1" @click=${() => this._showScreen('home')}>Home</a>
   <a href="#2" @click=${() => this._showScreen('about')}>About</a>
   <a href="#3" @click=${() => this._showScreen('services')}>Services</a>
-  <a href="#4" @click=${() => this._showScreen('contact')}>Contact <scroll-button></scroll-button></a>
- 
+  <a href="#4" @click=${() => this._showScreen('contact')}>Contact</a>
   </div>
 </div>`;
   }
