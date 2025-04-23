@@ -77,6 +77,7 @@ export class PortfolioSidebarTheme extends DDDSuper(I18NMixin(LitElement)) {
       text-decoration: none;
       color: white;
     }
+    
     `];
   }
 
@@ -85,10 +86,10 @@ export class PortfolioSidebarTheme extends DDDSuper(I18NMixin(LitElement)) {
     return html`
 <div class="wrapper">
 <div class="sidebar">
-  <a @click=${() => this._showScreen('home')}>Home</a>
-  <a @click=${() => this._showScreen('about')}>About</a>
-  <a @click=${() => this._showScreen('services')}>Services</a>
-  <a @click=${() => this._showScreen('contact')}>Contact</a>
+  <a href="#1" @click=${() => this._showScreen('home')}>Home</a>
+  <a href="#2" @click=${() => this._showScreen('about')}>About</a>
+  <a href="#3" @click=${() => this._showScreen('services')}>Services</a>
+  <a href="#4" @click=${() => this._showScreen('contact')}>Contact</a>
   </div>
 </div>`;
   }
