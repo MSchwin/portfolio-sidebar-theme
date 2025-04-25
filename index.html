@@ -12,6 +12,7 @@
     :root, html, body {
       margin: 0;
       padding: 0;
+      scroll-behavior: smooth;
     }
     #demo {
       margin: var(--ddd-spacing-2);
@@ -30,6 +31,7 @@
         margin: var(--ddd-spacing-2);
         padding: var(--ddd-spacing-4);
         border: var(--ddd-border-md);
+        position: fixed;
        
         
       
@@ -44,12 +46,9 @@
       color: var(--ddd-primary-17);
     }
     .screen {
-      display: none;
-    }
-
-    .screen.active {
       display: block;
     }
+
     .content {
       
       padding: 10px;
@@ -58,6 +57,7 @@
     
     .page {
       margin: var(--ddd-spacing-7);
+      margin-left: 200px;
       
       
       display: flex;
@@ -87,6 +87,7 @@
 
 <body>
   <div id="demo">
+  
     <portfolio-sidebar-theme></portfolio-sidebar-theme>
   
   <div class="page">
@@ -94,24 +95,22 @@
     <img src="https://pbs.twimg.com/media/GK_SA0iWgAEO0er.png:large"  height="200" >
   </div>
   <div class="content">
-    <div id="home" class="screen active">
+    <div id="#1" class="screen ">
       <h1>Home</h1>
 
     </div>
-
-    <div id="about" class="screen ">
+    <div id="#2" class="screen  ">
       <h1>About</h1>
     </div>
 
-    <div id="services" class="screen">
+    <div id="#3" class="screen ">
       <h1>Services</h1>
     </div>
 
-    <div id="contact" class="screen">
+    <div id="#4" class="screen ">
       <h1>Contact</h1>
     </div>
-    <scroll-button></scroll-button>
-
+    
   </div>
   </div>
   </div>

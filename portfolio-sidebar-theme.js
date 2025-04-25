@@ -66,7 +66,7 @@ export class PortfolioSidebarTheme extends DDDSuper(I18NMixin(LitElement)) {
       }
       .sidebar{  
         
-        position: fixed ;
+        
         
         
         
@@ -83,7 +83,7 @@ export class PortfolioSidebarTheme extends DDDSuper(I18NMixin(LitElement)) {
     
     }
     .sidebar scroll-button{
-
+      margin-left: 30%;
       
 
     }
@@ -96,23 +96,17 @@ export class PortfolioSidebarTheme extends DDDSuper(I18NMixin(LitElement)) {
     return html`
 <div class="wrapper">
 <div class="sidebar">
-  <a href="#1" @click=${() => this._showScreen('home') } >Home </a>
-  <a href="#2" @click=${() => this._showScreen('about')}>About</a>
-  <a href="#3" @click=${() => this._showScreen('services')}>Services</a>
-  <a href="#4" @click=${() => this._showScreen('contact')}>Contact <scroll-button></scroll-button></a>
+  <a href="#1" >Home </a>
+  <a href="#2" >About</a>
+  <a href="#3" >Services</a>
+  <a href="#4" >Contact </a>
+  <br>
+  <scroll-button></scroll-button>
  
   </div>
 </div>`;
   }
-  _showScreen(screenId) {
-    const screens = document.querySelectorAll('.screen');
-    screens.forEach(screen => screen.classList.remove('active'));
   
-    const targetScreen = document.getElementById(screenId);
-    if (targetScreen) {
-      targetScreen.classList.add('active');
-    }
-  }
   
 
  
