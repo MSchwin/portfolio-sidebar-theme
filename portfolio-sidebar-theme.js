@@ -99,7 +99,8 @@ export class PortfolioSidebarTheme extends DDDSuper(I18NMixin(LitElement)) {
   <a href="#1" >Home </a>
   <a href="#2" >About</a>
   <a href="#3" >Services</a>
-  <a href="#4" >Contact </a>
+  <a href="#3" >Apply</a>
+  <a href="#5" >Contact </a>
   <br>
   <scroll-button></scroll-button>
  

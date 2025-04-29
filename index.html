@@ -27,7 +27,7 @@
       color: var(--ddd-theme-default-nittanyNavy);
         background-color: var(--ddd-theme-default-nittanyNavy);
         font-family: var(--ddd-font-navigation);
-        height: 900px;
+        height: 100vh;
         margin: var(--ddd-spacing-2);
         padding: var(--ddd-spacing-4);
         border: var(--ddd-border-md);
@@ -36,49 +36,56 @@
         
       
     }
-    portfolio-sidebar-theme:hover {
-      box-shadow: var(--ddd-boxShadow-sm);
-
-    }
-    #example {
-      --portfolio-sidebar-theme-font-size: var(--ddd-font-size-l);
-      background-color: var(--ddd-accent-2);
-      color: var(--ddd-primary-17);
-    }
-    .screen {
-      display: block;
-    }
-
-    .content {
-      
-      padding: 10px;
-      
-    }
+   
     
     .page {
-      margin: var(--ddd-spacing-7);
-      margin-left: 200px;
-      
-      
-      display: flex;
-      flex-direction: column;
+      margin-left: 170px; 
+      padding: 20px;
+      flex-grow: 1;
 
+    }
+    .logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px; 
+      min-width: fit-content;
+      
     }
     .logo img {
       
       display: block;
-      padding: 10px;
-      justify-content: center;
     }
+
     h1 {
+      
       border: var(--ddd-border-md);
       border-color: var(--ddd-theme-default-limestoneGray);
       background-color: var(--ddd-theme-default-limestoneGray) ;
+      min-width: 100%;
+      max-height: 100px;
+      padding: 10px;
+      text-align: center;
       justify-content: center;
+      align-items: center;
 
 
     }
-    
+    .content {
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+      
+    }
+     .screen {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      font-size: x-large;
+
+      
+    }
+   
 
  
   </style>
@@ -94,22 +101,47 @@
   <div class="logo">
     <img src="https://pbs.twimg.com/media/GK_SA0iWgAEO0er.png:large"  height="200" >
   </div>
+  <br><br>
   <div class="content">
-    <div id="#1" class="screen ">
+    <div id="1" class="screen ">
       <h1>Home</h1>
-
+     <p>Welcome to the College of Information Sciences and Technology (IST)
+      At Penn State’s College of IST, we blend technology, business, and innovation to prepare tomorrow’s tech leaders. Explore how our programs, research, and community partnerships drive real-world impact. Whether you're a future student, a researcher, or a collaborator, there's a place for you here.</p>
     </div>
-    <div id="#2" class="screen  ">
+    <div id="2" class="screen  ">
       <h1>About</h1>
+      <p>The College of IST at Penn State empowers students to become technology professionals, leaders, and innovators. We offer interdisciplinary programs focused on data science, cybersecurity, enterprise technology integration, and more. With strong ties to industry and a commitment to hands-on learning, our graduates leave prepared to solve complex global challenges.</p>
     </div>
 
-    <div id="#3" class="screen ">
+    <div id="3" class="screen ">
       <h1>Services</h1>
+      <li>Advising: Personalized academic guidance to help you stay on track. </li>
+        <li>Career Solutions: Resume reviews, career fairs, internships, and employer connections.</li>
+        <li>Learning Spaces: Access to state-of-the-art labs and research centers.</li>
+        <li>Tutoring: Academic support from peer mentors.</li>
+
     </div>
 
-    <div id="#4" class="screen ">
-      <h1>Contact</h1>
+    <div id="4" class="screen ">
+      <h1>Apply</h1>
+      <p>Ready to start your journey with IST? We’re looking for students who are curious, driven, and ready to make a difference with technology.</p>
+      <ul>
+        <li><strong>Undergraduate:</strong> Apply through Penn State’s admissions portal.</li>
+        <li><strong>Graduate:</strong> Explore our master’s and Ph.D. programs.</li>
+        <li><strong>Financial Aid:</strong> Scholarships and grants available.</li>
+      </ul>
+      <p><strong>Deadlines:</strong> Fall Semester – Nov 30 (Early Action), Feb 1 (Regular).</p>
     </div>
+
+    <div id="5" class="screen ">
+      <h1>Contact</h1>
+      <p><strong>Office Address:</strong> E397 Westgate Building, University Park, PA 16802</p>
+      <p><strong>Phone:</strong> (814) 865-8947</p>
+      <p><strong>Email:</strong> ist@psu.edu</p>
+      <p><strong>Hours:</strong> Monday–Friday, 8:00 AM–5:00 PM EST</p>
+      <p>Follow us on social media @PennStateIST for news, events, and student stories.</p>
+    </div>
+
     
   </div>
   </div>
