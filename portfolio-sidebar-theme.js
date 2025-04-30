@@ -74,7 +74,6 @@ export class PortfolioSidebarTheme extends DDDSuper(I18NMixin(LitElement)) {
       .sidebar a {
         display: flex;
         flex-direction: column;
-        color: white;
       padding: 15px;
       text-decoration: none;
       color: white;
@@ -96,11 +95,11 @@ export class PortfolioSidebarTheme extends DDDSuper(I18NMixin(LitElement)) {
     return html`
 <div class="wrapper">
 <div class="sidebar">
-  <a href="#1" >Home </a>
-  <a href="#2" >About</a>
-  <a href="#3" >Services</a>
-  <a href="#3" >Apply</a>
-  <a href="#5" >Contact </a>
+  <a href="#s-1" >Home </a>
+  <a href="#s-2" >About</a>
+  <a href="#s-3" >Services</a>
+  <a href="#s-4" >Apply</a>
+  <a href="#s-5" >Contact </a>
   <br>
   <scroll-button></scroll-button>
  
